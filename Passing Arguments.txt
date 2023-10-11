@@ -1,0 +1,324 @@
+x++
+
+x=x+1;
+
+x--
+
+x=x-1;
+
+post increment  x++   first use value then perform operation
+pre increment   ++x    first perform operation then use the varible
+int x=5
+int z=++x;
+
+
+int c=(a=10)?a:b;
+
+conversion 
+converting one type value to other type
+
+implicit   which compiler do for our program
+
+explicit    we will give instruction to do the conversion
+
+value = (x=10, y=5, x+y);
+-2147483648  to 2147483647
+
+
+
+
+
+
+
+Literals
+
+particular type of constants
+10  integral 
+30.8   double 
+'a'  character
+"hello"  string
+"3"
+
+&a 
+*p
+++p  or p++
+--x   or p--
++a
+-a
+
+
+&&   if first operand is false then second not evaluated
+||   if first is true then second not evaluated
+
+for
+{
+drtgrh
+ghfthdf
+}
+
+
+
+
+
+Loops
+repetitive statements
+
+1. for
+2. while
+3. do while
+
+for(intialization;condition; updation)
+{
+
+
+}
+
+
+int i;
+for( i=0;i<10;i++)
+cout<<"value of i= "<<i;
+
+
+
+if(condition)
+{
+
+int x;
+cout<<"hello";
+cout<<"welcome"<<x;
+}
+else
+{
+cout<<x;
+
+
+}
+
+
+
+
+storage class   datatype  variablename;
+
+
+auto
+register
+static
+extern
+
+syntax of while
+
+intialization
+
+while(condition)
+{
+
+
+
+ // updation
+}
+
+int i=20;
+while(i<100)
+{
+cout<<i<<endl;
+i=i/5;
+}
+name mangling   makes c++ or c platform dependent
+
+int var
+cout<<"enter value between 1-7";
+cin>>var;
+switch(var)
+{
+case 1: cout<<"hello";
+break;
+
+case 2: cout<<"hi";
+break;
+
+
+
+default: cout<<"wrong choice";
+
+}
+
+Do while syntax
+
+intialize
+do
+{
+
+updation
+
+}while(condition);
+
+char ch;
+int num1,num2;
+int choice;
+int result;
+do
+{
+
+cout<<"enter your choice\n";
+cout<<"1. substraction\n";
+cout<<"2. addition\n";
+cout<<"3. multiplication\n";
+cout<<"4. division\n";
+cin>>choice;
+switch(choice)
+{
+case 1: 
+	cout<<enter the first number\n";
+	cin>>num1;
+	cout<<enter the second number\n";
+	cin>>num2;
+	result=num1-num2;
+	cout<<"substraction result is "<<result<<endl;
+	break;
+case 2: 
+	cout<<enter the first number\n";
+	cin>>num1;
+	cout<<enter the second number\n";
+	cin>>num2;
+	result=num1+num2;
+	cout<<"Addition result is "<<result<<endl;
+	break;
+case 3: 
+	cout<<enter the first number\n";
+	cin>>num1;
+	cout<<enter the second number\n";
+	cin>>num2;
+	result=num1*num2;
+	cout<<"multiplication result is "<<result<<endl;
+	break;
+case 4: 
+	cout<<enter the first number\n";
+	cin>>num1;
+	cout<<enter the second number\n";
+	cin>>num2;
+	result=num1-num2;
+	cout<<"Division result is "<<result<<endl;
+	break;
+
+default: 
+cout<<"\n wrong choice";
+}
+
+cout<<"Do you want to continue\n enter y for yes or n for no\n";
+cin>>ch;
+}while(ch=='y'||ch=='Y');
+
+
+
+compile hello.cpp
+
+
+Compile command
+g++ hello.cpp 
+
+
+a.out  executable file
+Run the program
+./a.out 
+
+Compile command
+g++ hello.cpp -o hello
+
+hello
+Run the program
+./hello i like proggraming
+
+argc   argument count  total no of command line argument passed
+
+argv   argument value  
+
+
+Types of variable
+passing arguments to fuction
+arrays
+
+Types of variable
+1. value variable   stores values
+2. pointer variable    stores address
+3. reference variable   aliasing existing value variable. its take simplicity of value variable 
+                         and power of pointer variable
+
+
+& is known as Reference operator or address operator
+
+ int &a=x
+
+int  *p=&z;
+
+* is known as dereference operator
+
+
+
+passing argument to functions
+1. pass by value
+
+void swap1(int x,int y)
+{
+    x=x+y;
+    y=x-y;
+    x=x-y;
+    cout<<"x= "<<x<<" and y= "<<y<<endl;
+}
+ int main()   //command line arguments
+ {
+    int a=20;
+    int b=15;
+    cout<<"before swap "<<endl;
+    cout<<"a= "<<a<<" and b= "<<b<<endl;
+    swap1(a,b);
+    cout<<"after swap "<<endl;
+    cout<<"a= "<<a<<" and b= "<<b<<endl;
+     return 0;
+ }
+ 
+
+
+2. pass by address
+
+
+void swap1(int *x,int *y)
+{
+    *x=*x+*y;
+    *y=*x-*y;
+    *x=*x-*y;
+    cout<<"x= "<<*x<<" and y= "<<*y<<endl;
+}
+ int main()   //command line arguments
+ {
+    int a=20;
+    int b=15;
+    cout<<"before swap "<<endl;
+    cout<<"a= "<<a<<" and b= "<<b<<endl;
+    swap1(&a,&b);
+    cout<<"after swap "<<endl;
+    cout<<"a= "<<a<<" and b= "<<b<<endl;
+     return 0;
+ }
+
+3. pass by reference
+
+void swap1(int &x,int &y)
+{
+    x=x+y;
+    y=x-y;
+    x=x-y;
+    cout<<"x= "<<x<<" and y= "<<y<<endl;
+}
+ int main()   //command line arguments
+ {
+    int a=20;
+    int b=15;
+    cout<<"before swap "<<endl;
+    cout<<"a= "<<a<<" and b= "<<b<<endl;
+    swap1(a,b);
+    cout<<"after swap "<<endl;
+    cout<<"a= "<<a<<" and b= "<<b<<endl;
+     return 0;
+ }
+ 
+
